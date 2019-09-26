@@ -1,0 +1,50 @@
+<!--pages/order/orderData/orderData.wxml-->
+
+<view>
+
+  <view class='fs item30 bw mb20 s26 c3'>
+    <image class='mr20' mode='widthFix' src='/images/shop/shopTop.png' style='width:27rpx'></image>
+    <view class='w100'>
+      <view class='fb mb10'>
+        <view>王春花</view>
+        <view>15565236987</view>
+      </view>
+      <view>河南郑州市管城回族区航海东路街道 航海东路9号中鼎翡翠·晶典三期一号楼二单元808</view>
+    </view>
+  </view>
+
+  <view class='mb20'>
+    <block wx:for="{{[1,1]}}" wx:key="id">
+      <view class="pros bd fb bw">
+        <image mode='aspectFill' class='mr30' src="/images/2.png"></image>
+        <view class='va prosRight'>
+          <view class="">
+            <view class="s26 of">十月稻田 王孟农精品无农药黄小米（黄小米 真空装 大米伴侣 粥米搭档）5kg</view>
+            <view class="gray_font big_font_22">规格：5kg</view>
+          </view>
+          <view class="fb">
+            <view class="red_font big_font_30">￥98</view>
+            <view class="">×1</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class='item30 bw c9 orderData'>
+    <view>订单编号：156849634578926519</view>
+    <view>
+      <text>支付方式：</text>
+      <text>微信支付</text>
+    </view>
+    <view>下单时间：2019-07-04 09:52:56</view>
+  </view>
+</view>
+
+
+<view class='bottom bw fe'>
+  <view class='bottom_bot c6 ac ml30'>取消订单</view>
+  <view class='bottom_bot c6 ac ml30'>付款</view>
+  <view class='bottom_bot c6 ac ml30'>确认收货</view>
+
+</view>

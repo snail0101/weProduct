@@ -1,0 +1,82 @@
+/* pages/product/productList/productList.wxss */
+@import "/utils/style/flexstyle.wxss";
+
+.specclass {
+  width: 100%;
+  background: #fff;
+  border-top: 1rpx solid #ededed;
+  position: fixed;
+  bottom: 0;
+  z-index: 2000;
+}
+
+.specclass_title {
+  height: 112rpx;
+  border-bottom: 1rpx solid #ededed;
+}
+
+.cancel {
+  position: absolute;
+  top: 40rpx;
+  right: 30rpx;
+}
+.specclassImg {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.size {
+  font-size: 24rpx;
+  text-align: center;
+  padding: 10rpx 20rpx;
+  display: inline-block;
+  margin: 20rpx 0rpx 0 30rpx;
+  border-radius: 10rpx;
+}
+
+.check {
+  background: #fff7f7;
+  color: #f23030;
+  border: solid 1px #ff7f7f;
+}
+
+.nocheck {
+  color: #666;
+  background: #ededed;
+}
+
+.muns {
+  display: flex;
+}
+
+.minus {
+  border: 1rpx solid #999;
+  border-right: none;
+  width: 62rpx;
+  padding: 0 15rpx;
+  display: flex;
+  align-items: center;
+}
+
+.num {
+  border: 1rpx solid #999;
+  width: 60rpx;
+  padding: 1rpx;
+  text-align: center;
+}
+
+.add {
+  border: 1rpx solid #999;
+  width: 62rpx;
+  border-left: none;
+  padding: 0 15rpx;
+  display: flex;
+  align-items: center;
+}
+.buttons button{
+  width: 50%;
+  font-size: 26rpx
+}
+.item30{
+  padding: 30rpx
+}

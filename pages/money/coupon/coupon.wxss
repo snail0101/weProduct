@@ -1,0 +1,7 @@
+/* pages/money/coupon/coupon.wxss */
+@import '/utils/style/flexstyle.wxss';
+
+.item{
+  padding: 30rpx;
+  margin: 30rpx
+}

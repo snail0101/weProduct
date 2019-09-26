@@ -1,0 +1,21 @@
+<!--pages/base/login/login.wxml-->
+    <view >
+      <form bindsubmit='record'>
+        <view class='bw fs mb20'>
+          <image class='mr30' mode='widthFix' src='/images/1.png' style='width:36rpx'></image>
+          <input placeholder='请输入手机号' maxlength='11' type='number'></input>
+        </view>
+
+        <view class='bw fs mb30'>
+          <input placeholder='请输入验证码' ></input>
+          <button>获取验证码</button>
+        </view>
+
+        <button form-type='submit' class='ac s36 fw6 mb40'>进入易小康</button>
+      </form>
+      <view class="tc" >
+        <span>登陆即可同意易小康的</span>
+        <span bindtap="toUserAgree" class="underline">《用户协议》和《隐私协议》</span>
+      </view>
+    </view>
+

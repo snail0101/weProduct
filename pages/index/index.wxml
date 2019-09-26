@@ -1,0 +1,38 @@
+<!--index.wxml-->
+
+<!-- 轮播图 -->
+<swiper class='bannerSwiper' autoplay='true' circular='true' indicator-dots='true'>
+  <block wx:for="{{[1,1,1]}}" wx:key="id">
+    <swiper-item>
+      <image mode='aspectFill' src='/images/2.png' style='width:100%;height:100%;'></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="fs warp bw mb20">
+  <block wx:for='{{[1,1,1,1,1]}}' wx:key='id'>
+    <view class="sortItem vc" bindtap="toProductList" data-id="{{index}}">
+      <image src="/images/1.png"></image>
+      <view>米面</view>
+    </view>
+  </block>
+</view>
+
+<view class="mb20 fs">
+  <view>  精品农特VIP专场</view>
+  <view>
+    <span>|</span>
+    <span>小康严选品质惊人的良心农产</span>
+  </view>
+</view>
+
+<view class="fb warp productItems">
+  <block wx:for='{{[1,1,1,1,1]}}' wx:key='id'>
+    <view class="productItem bw">
+      <image mode="widthFix" src="/images/2.png"></image>
+      <view>陕北黄小米陕北黄小米陕北黄小米陕北黄小米陕北黄小米</view>
+      <view class="c_r">￥113.98</view>
+    </view>
+  </block>
+
+</view>

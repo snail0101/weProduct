@@ -1,0 +1,11 @@
+<!--pages/money/coupon/coupon.wxml-->
+<view class="item fs bw">
+  <view class="mr30">
+    <view class="s40 fw6">500个</view>
+    <view>小康币</view>
+  </view>
+  <view>
+    <view>1个小康币=1元，全场无限制通用。</view>
+    <view>（可一次性全部使用！）</view>
+  </view>
+</view>

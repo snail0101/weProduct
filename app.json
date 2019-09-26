@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/people/people",
+    "pages/shopping/shopping",
+    "pages/product/productList/productList",
+    "pages/base/login/login",
+    "pages/base/userAgree/userAgree",
+    "pages/order/addOrder/addOrder",
+    "pages/order/orderList/orderList",
+    "pages/order/orderData/orderData",
+    "pages/money/coupon/coupon",
+    "pages/order/address/address"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "易小康",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#FF8003",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index/sort.png",
+        "selectedIconPath": "images/index/sortS.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "购物车",
+        "iconPath": "images/index/shopping.png",
+        "selectedIconPath": "images/index/shoppingS.png"
+      },
+      {
+        "pagePath": "pages/people/people",
+        "text": "我的",
+        "iconPath": "images/index/people.png",
+        "selectedIconPath": "images/index/peopleS.png"
+      }
+    ]
+  }
+}

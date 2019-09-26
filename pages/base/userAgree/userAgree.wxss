@@ -1,0 +1,10 @@
+/* pages/base/userAgree/userAgree.wxss */
+page{
+  color: #999
+}
+.tc{
+  text-align: center;
+  color: #333;
+  font-size: 40rpx;
+  font-weight: 600
+}

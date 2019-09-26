@@ -1,0 +1,60 @@
+/* pages/people/people.wxss */
+@import "/utils/style/flexstyle.wxss";
+
+.position_re{
+  position: relative
+}
+.vip{
+    position:absolute;
+    background:red;
+    color:#000;
+    height: 40rpx;
+    right: -100rpx;
+    top: 0
+}
+.vip:before{
+    position:absolute;
+    content:"";
+    width:0;
+    height:0;
+    border:transparent 20rpx solid;
+    border-right-color:red;
+    top:0;
+    left: -40rpx
+    
+}
+
+/* 订单 */
+.mytorder_icon {
+  position: relative;
+}
+.mytorder_icon image {
+  width: 64rpx;
+  margin-bottom: 20rpx;
+}
+
+.mytorder_icons {
+  width: 25%;
+}
+
+.num {
+  position: absolute;
+  top: -12rpx;
+  right: -12rpx;
+  background: #f23030;
+  border-radius: 50%;
+  color: #fff;
+  width: 30rpx;
+  height: 30rpx;
+  font-size: 20rpx;
+}
+
+
+
+
+
+/*  */
+.icon_item image{
+  width: 80rpx;
+  height: 80rpx
+}

@@ -1,0 +1,63 @@
+<!--pages/product/productList/productList.wxml-->
+<import src="/utils/template/maskLayer/maskLayer.wxml" />
+
+<template is="maskLayer" data="{{showModalStatus}}" />
+
+<view class=" bw">
+  <block wx:for='{{[1,1,1,1]}}' wx:key='id'>
+    <view class="fba mlr30 bd">
+      <image class="mr30" mode="widthFix" src="/images/2.png" style="width:260rpx"></image>
+      <view class="va">
+        <view>十月稻田 王孟农精品无农药黄小米（黄小米 真空装 大米伴侣 粥米搭档）5kg</view>
+        <view class="fb">
+          <view>￥63.98</view>
+          <image bindtap="showShopping" mode="widthFix" src="/images/3.png" style="width:40rpx"></image>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+
+<view class='specclass' wx:if="{{showShopping}}">
+  <view class='specclass_title ac s32 c3'>选择商品规格</view>
+  <image class='cancel' catchtap='hideModal' mode='widthFix' src='/images/cancel.png' style='width:32rpx;'></image>
+  <view class='item30'>
+    <view class="fs mb30">
+      <image class='specclassImg mr30' mode='aspectFill' src="/images/2.png"></image>
+      <view class="va specProRight">
+        <view class="s26 of" style='width:510rpx'>{{proData.name}}</view>
+        <view class="c_r s30">
+          <text>¥{{proSpecItem.price}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='pb30 bd mb30'>
+      <view>规格：</view>
+      <radio-group class='fs specList' bindchange="specListChange">
+        <label wx:for="{{[1,1,1,1]}}" wx:key="id">
+          <radio value="{{index}}" checked="{{item.checked}}" hidden='true' />
+          <view class='{{index==0?"check":"nocheck"}} size'>5KG</view>
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="fb">
+      <view class="">数量：</view>
+      <view class="muns">
+        <view class="minus ac" bindtap="minus">-</view>
+        <input class="num" disabled='true' type='number' name="num" maxlength="3" value="{{num}}" />
+        <view class="add ac" bindtap="add">+</view>
+      </view>
+      <!-- <view wx:if='{{buttonType=="saveBargain"}}'>1</view> -->
+    </view>
+
+  </view>
+ 
+  <view class="buttons fs">
+    <button>加入购物车</button>
+    <button>立即购买</button>
+  </view>
+
+</view>

@@ -1,0 +1,70 @@
+<!--pages/people/people.wxml-->
+
+<view class="vc">
+<view class="position_re">
+  <image mode="widthFix" src="/images/1.png" style="width:100rpx"></image>
+  <view class="vip ac">VIP会员</view>
+</view>
+
+  <view>微信昵称</view>
+  <view>132****2233</view>
+</view>
+
+<!-- 订单 -->
+<view class="order bw mb20">
+  <view class="fb">
+    <view>我的订单</view>
+    <view bindtap="toOrderList" data-tab="0">查看所有订单></view>
+  </view>
+  <view class=' fa'>
+    <view class='mytorder_icons vc' bindtap='toOrderList' data-tab='1'>
+      <view class='mytorder_icon'>
+        <image mode='widthFix' src='/images/people/order_fk.png'></image>
+        <view class='num ac'>1</view>
+      </view>
+      <view>待付款</view>
+    </view>
+    <view class='mytorder_icons vc' bindtap='toOrderList' data-tab='2'>
+      <view class='mytorder_icon'>
+        <image mode='widthFix' src='/images/people/order_fh.png'></image>
+        <view class='num ac' wx:if="{{orderNumber.notSend&&orderNumber.notSend!=0}}">{{orderNumber.notSend}}</view>
+      </view>
+      <view>待发货</view>
+    </view>
+    <view class='mytorder_icons vc' bindtap='toOrderList' data-tab='3'>
+      <view class='mytorder_icon'>
+        <image mode='widthFix' src='/images/people/order_sh.png'></image>
+        <view class='num ac' wx:if="{{orderNumber.toSend&&orderNumber.toSend!=0}}">{{orderNumber.toSend}}</view>
+      </view>
+      <view>待收货</view>
+    </view>
+  </view>
+</view>
+
+<!-- 小标题 -->
+<view class="">
+  <view class="mb20 bw">
+    <view class="fb bd">
+      <view class="fs icon_item">
+        <image src="/images/1.png"></image>
+        <view>收货地址管理</view>
+      </view>
+      <view>></view>
+    </view>
+    <view class="fb" bindtap="toCoupon">
+      <view class="fs icon_item">
+        <image src="/images/1.png"></image>
+        <view>我的优惠卷</view>
+      </view>
+      <view>></view>
+    </view>
+  </view>
+
+  <view class="fb bw">
+    <view class="fs icon_item">
+      <image src="/images/1.png"></image>
+      <view>关于我们</view>
+    </view>
+    <view>></view>
+  </view>
+</view>

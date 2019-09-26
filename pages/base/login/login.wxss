@@ -1,0 +1,9 @@
+/* pages/base/login/login.wxss */
+@import "/utils/style/flexstyle.wxss";
+
+.underline{
+  text-decoration: underline
+}
+.tc{
+  text-align: center
+}

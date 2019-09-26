@@ -1,0 +1,38 @@
+/**index.wxss**/
+@import "/utils/style/flexstyle.wxss";
+
+/* 轮播图 */
+
+.bannerSwiper {
+  width: 100%;
+  height: 400rpx;
+}
+
+/* 商品分类 */
+
+.sortItem {
+  width: 25%;
+}
+
+.warp {
+  flex-wrap: wrap;
+}
+
+.sortItem image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 商品详情 */
+.productItems{
+  margin: 0 20rpx;
+  width: 710rpx
+}
+.productItem{
+  width: 345rpx;
+  margin: 0 0 20rpx
+}
+.productItem image{
+  width: 100%
+}
+

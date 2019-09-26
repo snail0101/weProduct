@@ -1,0 +1,70 @@
+<!--pages/order/orderList/orderList.wxml-->
+<import src="/utils/xmls/noneDataStyle/noneDataStyle.wxml" />
+<import src="../../../utils/xmls/maskLayer/maskLayer.wxml" />
+
+<view class='top_border'></view>
+
+<view class="fa bd bw">
+  <block wx:for="{{order_title}}" wx:key="id">
+    <view class="{{current==index?'titlecolor':''}} titleTop" bindtap="changeTitle" data-id="{{index}}">
+      <view class='order_title_text'>{{item}}</view>
+    </view>
+  </block>
+</view>
+
+<swiper current="{{current}}" bindchange="changeSwiper" style='height:90%'>
+
+  <block wx:for="{{order_title}}" wx:key="id">
+    <swiper-item>
+      <scroll-view scroll-y="true" bindscrolltolower="lowerLoading">
+
+        <block wx:for="{{[1,1,1,1]}}" wx:key="id">
+
+          <view class="orders bw mb20" bindtap='toOrderData' data-index='{{index}}'>
+            <view class="fe pb30 bd">
+              <view class="s26 c_i">
+                <label >等待买家付款</label>
+                <!-- <label wx:if="{{current==2}}">等待卖家发货</label>
+                <label wx:if="{{current==3}}">等待买家收货</label>
+                <label wx:if="{{current==4}}">已完成</label> -->
+              </view>
+            </view>
+
+            <block wx:for="{{[1,1]}}" wx:key="id">
+
+              <view class="pros bd fb">
+                <image mode='aspectFill' class='mr30' src="/images/2.png"></image>
+                <view class='va prosRight'>
+                  <view class="">
+                    <view class="s26 of">十月稻田 王孟农精品无农药黄小米（黄小米 真空装 大米伴侣 粥米搭档）5kg</view>
+                    <view class="gray_font s22">规格：5kg</view>
+                  </view>
+                  <view class="fb">
+                    <view class="red_font s30" >￥98</view>
+                  </view>
+
+                </view>
+              </view>
+            </block>
+
+            <view class="fe pt20 mb20">
+              <view class="">
+                <text>共2件商品</text>
+                <text> 合计：</text>
+                <text class='c_r'>￥180</text>
+              </view>
+            </view>
+
+            <view class="fe buts s24">
+
+              <view class="ac" wx:if="{{current==1}}" catchtap="sureCancel" data-id='{{item.id}}'>取消订单</view>
+              <view class="ac" wx:if="{{current==1}}" catchtap="surePay" data-id='{{item.id}}'>付款</view>
+              <view class="ac" wx:if="{{current==3}}" catchtap="sureReceive" data-id='{{item.id}}'>确认收货</view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </block>
+
+</swiper>

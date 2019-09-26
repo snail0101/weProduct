@@ -1,0 +1,60 @@
+<!--pages/shopping/shopping.wxml-->
+<import src="/utils/template/noneDataStyle/noneDataStyle.wxml" />
+<import src="/utils/template/maskLayer/maskLayer.wxml" />
+<view class='top_border'></view>
+<!-- <template is="noneDataStyle" data="{{data:carts}}" /> -->
+
+<view class='pros'>
+  <block wx:for="{{[1,1,1]}}" wx:key="id">
+    <view class='mb20 bw'>
+      <view class='pro fb  ' bindtap='checkState' data-index='{{index}}'>
+
+        <image mode='widthFix' class='checkImg' src='{{item.checkState?"/images/my/ordercheckS.png":"/images/my/ordercheck.png"}}'></image>
+
+        <view class='cover'>
+          <image mode='aspectFill' src='{{imgURL+item.productPic}}' class='proImg'></image>
+
+        </view>
+
+
+        <view class='vba proRight'>
+          <!-- 右上部分 -->
+          <view>
+            <view class='s26 of'>微波炉微波炉微波炉微波炉微波炉微波炉微波炉微微波炉微波炉微波炉微波炉微波炉微波炉微波炉微波炉·波炉·</view>
+            <view class='s22 c9' style='padding-top:8rpx'>规格：100kg</view>
+          </view>
+
+          <!-- 右下部分 -->
+          <view class="fb">
+            <view class="s30 c_r">¥98</view>
+            <!-- 数量选择 -->
+            <view class="muns">
+              <view class="minus ac" data-index="{{index}}" catchtap="minus">-</view>
+              <input class="num" disabled='true' type='number' name="num" maxlength="3" value="{{item.number}}" />
+              <view class="add ac" data-index="{{index}}" catchtap="add">+</view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+  </block>
+</view>
+
+<view class="final fb">
+  <view>
+    全选
+  </view>
+
+  <view class="fe">
+    <view class='ml30'>合计：
+      <span class="c_r">¥98</span>
+    </view>
+      <!-- <button class='' bindtap=''>删除</button> -->
+      <button class='' bindtap='toAddOrder'>结算</button>
+
+  </view>
+
+
+</view>
